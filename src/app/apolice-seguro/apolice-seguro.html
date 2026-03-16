@@ -1,0 +1,44 @@
+<div class="container-formulario">
+	<h2>Apolice de Seguro</h2>
+	<p class="voltar"><a routerLink="/home">Voltar para Home</a></p>
+
+	<form class="formulario">
+		<div class="campo">
+			<label for="nomeSegurado">Nome do segurado</label>
+			<input id="nomeSegurado" type="text" [(ngModel)]="nomeSegurado" name="nomeSegurado" placeholder="Digite o nome" />
+		</div>
+
+		<div class="campo">
+			<label for="sexo">Sexo</label>
+			<select id="sexo" [(ngModel)]="sexo" name="sexo">
+				<option value="">Selecione</option>
+				<option value="masculino">Masculino</option>
+				<option value="feminino">Feminino</option>
+			</select>
+		</div>
+
+		<div class="campo">
+			<label for="idade">Idade</label>
+			<input id="idade" type="number" [(ngModel)]="idade" name="idade" min="1" placeholder="Ex.: 30" />
+		</div>
+
+		<div class="campo">
+			<label for="valorAutomovel">Valor do automovel (R$)</label>
+			<input id="valorAutomovel" type="number" [(ngModel)]="valorAutomovel" name="valorAutomovel" min="1" step="0.01" placeholder="Ex.: 55000" />
+		</div>
+
+		<div class="acoes">
+			<button type="button" class="btn-primario" (click)="calcularApolice()">Calcular</button>
+			<button type="button" class="btn-secundario" (click)="limpar()">Limpar</button>
+		</div>
+	</form>
+
+	<p *ngIf="erro" class="mensagem-erro">{{ erro }}</p>
+
+	<section *ngIf="showResult" class="resultado">
+		<h3>Resultado da apolice</h3>
+		<p><strong>Segurado:</strong> {{ nomeSegurado }}</p>
+		<p><strong>Percentual aplicado:</strong> {{ percentualApolice }}%</p>
+		<p><strong>Valor da apolice:</strong> R$ {{ valorApolice?.toFixed(2) }}</p>
+	</section>
+</div>

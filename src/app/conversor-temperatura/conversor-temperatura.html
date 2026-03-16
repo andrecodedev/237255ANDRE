@@ -1,0 +1,24 @@
+<div class="container-formulario">
+	<h2>Conversor de Temperatura</h2>
+	<p class="voltar"><a routerLink="/home">Voltar para Home</a></p>
+
+	<form class="formulario">
+		<div class="campo">
+			<label for="celsius">Temperatura em Celsius (C)</label>
+			<input id="celsius" type="number" [(ngModel)]="celsius" name="celsius" step="0.01" placeholder="Ex.: 25" />
+		</div>
+
+		<div class="acoes">
+			<button type="button" class="btn-primario" (click)="converter()">Converter</button>
+			<button type="button" class="btn-secundario" (click)="limpar()">Limpar</button>
+		</div>
+	</form>
+
+	<p *ngIf="erro" class="mensagem-erro">{{ erro }}</p>
+
+	<section *ngIf="showResult" class="resultado">
+		<h3>Resultado da conversao</h3>
+		<p><strong>Fahrenheit (F):</strong> {{ fahrenheit?.toFixed(2) }}</p>
+		<p><strong>Kelvin (K):</strong> {{ kelvin?.toFixed(2) }}</p>
+	</section>
+</div>

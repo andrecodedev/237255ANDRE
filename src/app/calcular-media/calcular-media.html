@@ -1,0 +1,73 @@
+<div class="container-media">
+  <h2>Calculadora de Média</h2>
+  <p class="voltar"><a routerLink="/home">Voltar para Home</a></p>
+  
+  <form class="form-group">
+    <div class="input-group">
+      <label for="ac1">AC1 (15%):</label>
+      <input 
+        id="ac1"
+        type="number" 
+        [(ngModel)]="ac1" 
+        name="ac1"
+        min="0" 
+        max="10"
+        placeholder="Digite a nota AC1"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="ac2">AC2 (30%):</label>
+      <input 
+        id="ac2"
+        type="number" 
+        [(ngModel)]="ac2" 
+        name="ac2"
+        min="0" 
+        max="10"
+        placeholder="Digite a nota AC2"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="ag">AG (10%):</label>
+      <input 
+        id="ag"
+        type="number" 
+        [(ngModel)]="ag" 
+        name="ag"
+        min="0" 
+        max="10"
+        placeholder="Digite a nota AG"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="af">AF (45%):</label>
+      <input 
+        id="af"
+        type="number" 
+        [(ngModel)]="af" 
+        name="af"
+        min="0" 
+        max="10"
+        placeholder="Digite a nota AF"
+      />
+    </div>
+
+    <div class="button-group">
+      <button type="button" (click)="calcularMedia()" class="btn-calcular">Calcular</button>
+      <button type="button" (click)="limpar()" class="btn-limpar">Limpar</button>
+    </div>
+  </form>
+
+  <p *ngIf="erro" class="mensagem-erro">{{ erro }}</p>
+
+  <div *ngIf="showResult" class="result-container" [class.aprovado]="status === 'Aprovado'" [class.reprovado]="status !== 'Aprovado'">
+    <h3>Resultado</h3>
+    <p class="media-final">Media Final: <strong>{{ mediaFinalFormatada }}</strong></p>
+    <p class="status" [class.text-aprovado]="status === 'Aprovado'" [class.text-reprovado]="status !== 'Aprovado'">
+      Status: <strong>{{ status }}</strong>
+    </p>
+  </div>
+</div>

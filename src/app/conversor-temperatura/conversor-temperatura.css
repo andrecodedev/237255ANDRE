@@ -1,0 +1,79 @@
+:host {
+	display: block;
+}
+
+.container-formulario {
+	max-width: 560px;
+	margin: 40px auto;
+	padding: 28px;
+	border-radius: 12px;
+	background: #fff8f2;
+	box-shadow: 0 8px 20px rgba(140, 77, 0, 0.15);
+}
+
+h2 {
+	margin: 0 0 10px;
+	color: #40210b;
+}
+
+.voltar {
+	margin: 0 0 20px;
+}
+
+.formulario {
+	display: grid;
+	gap: 14px;
+}
+
+.campo {
+	display: grid;
+	gap: 6px;
+}
+
+label {
+	font-weight: 600;
+	color: #603213;
+}
+
+input {
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #efc9a8;
+}
+
+.acoes {
+	display: flex;
+	gap: 10px;
+}
+
+button {
+	border: 0;
+	border-radius: 8px;
+	padding: 10px 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.btn-primario {
+	background: #d97706;
+	color: #fff;
+}
+
+.btn-secundario {
+	background: #6b7280;
+	color: #fff;
+}
+
+.mensagem-erro {
+	margin-top: 14px;
+	color: #b91c1c;
+	font-weight: 600;
+}
+
+.resultado {
+	margin-top: 16px;
+	padding: 14px;
+	border-radius: 8px;
+	background: #fff0e1;
+	border: 1px solid #f2c08f;
+}
