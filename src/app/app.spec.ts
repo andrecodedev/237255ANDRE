@@ -20,10 +20,13 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('should render ecommerce menu links', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, atividade-angular');
+    const navText = compiled.querySelector('nav')?.textContent ?? '';
+    expect(navText).toContain('Home');
+    expect(navText).toContain('Produtos');
+    expect(navText).toContain('Sobre Nós');
   });
 });

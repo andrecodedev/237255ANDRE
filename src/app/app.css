@@ -6,8 +6,8 @@
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
-	box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
+	background: linear-gradient(90deg, #064e3b 0%, #047857 100%);
+	box-shadow: 0 6px 16px rgba(6, 78, 59, 0.3);
 }
 
 .topnav {
@@ -21,7 +21,7 @@
 
 .topnav a {
 	text-decoration: none;
-	color: #e2e8f0;
+	color: #f3f4f6;
 	padding: 8px 12px;
 	border-radius: 8px;
 	font-weight: 600;
@@ -30,12 +30,12 @@
 }
 
 .topnav a:hover {
-	background: rgba(148, 163, 184, 0.22);
+	background: rgba(236, 253, 245, 0.2);
 }
 
 .topnav a.ativo {
-	background: #f59e0b;
-	color: #0f172a;
+	background: #d1fae5;
+	color: #064e3b;
 }
 
 .page-content {

@@ -1,14 +1,17 @@
 <main class="home-page">
-  <section class="hero">
-    <p class="eyebrow">Atividade Angular</p>
-    <h1>Escolha um modulo</h1>
-    <p class="subtitle">Clique em um dos botoes para abrir a pagina do modulo correspondente.</p>
+  <section class="hero" aria-label="Boas-vindas da loja">
+    <p class="eyebrow">E-commerce Simples</p>
+    <h1>Bem-vindo a Loja Angular</h1>
+    <p class="subtitle">Navegue pelos produtos e confira as ofertas do dia.</p>
   </section>
 
-  <nav class="module-grid" aria-label="Modulos da atividade">
-    <a class="module-card" routerLink="/apolice-seguro">Apolice de Seguro</a>
-    <a class="module-card" routerLink="/calculadora-imc">Calculadora IMC</a>
-    <a class="module-card" routerLink="/calcular-media">Calcular Media</a>
-    <a class="module-card" routerLink="/conversor-temperatura">Conversor de Temperatura</a>
-  </nav>
+  <section class="actions">
+    <button type="button" class="toggle-btn" (click)="toggleBanner()">Mostrar/Ocultar Banner</button>
+  </section>
+
+  <section *ngIf="showBanner" class="promo-banner" aria-live="polite">
+    <h2>Promocao Especial</h2>
+    <p>Frete gratis em compras acima de R$ 199,00 e 10% de desconto no primeiro pedido.</p>
+    <a routerLink="/produtos" class="cta-link">Ver produtos</a>
+  </section>
 </main>

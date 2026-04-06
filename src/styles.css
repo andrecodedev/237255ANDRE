@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--bg-page: #ecfdf5;
+	--bg-surface: #ffffff;
+	--bg-contrast: #064e3b;
+	--bg-soft: #d1fae5;
+	--text-primary: #052e16;
+	--text-secondary: #166534;
+	--border-color: #86efac;
+	--shadow-color: rgba(6, 78, 59, 0.18);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--bg-page);
+	color: var(--text-primary);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

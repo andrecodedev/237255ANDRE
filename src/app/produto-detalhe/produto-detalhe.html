@@ -1,0 +1,19 @@
+<main class="detalhe-page">
+  <section *ngIf="produtoSelecionado as produto; else semProduto" class="detalhe-card">
+    <img class="produto-imagem" [src]="produto.imagem" [alt]="produto.nome" loading="lazy" />
+    <h1>{{ produto.nome }}</h1>
+    <p class="preco">R$ {{ produto.preco.toFixed(2) }}</p>
+    <p>{{ produto.descricao }}</p>
+    <p class="estoque" [class.indisponivel]="!produto.emEstoque">
+      Status de estoque:
+      <strong>{{ produto.emEstoque ? 'Em estoque' : 'Fora de estoque' }}</strong>
+    </p>
+  </section>
+
+  <ng-template #semProduto>
+    <section class="detalhe-card">
+      <h1>Produto nao encontrado</h1>
+      <p>O item informado na URL nao existe.</p>
+    </section>
+  </ng-template>
+</main>

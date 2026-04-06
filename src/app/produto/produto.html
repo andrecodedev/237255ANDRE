@@ -1,0 +1,26 @@
+<main class="produto-page">
+  <h1>Produtos</h1>
+
+  <p *ngIf="produtos.length === 0" class="sem-produto">Nenhum produto disponivel no momento</p>
+
+  <section *ngIf="produtos.length > 0" class="lista-produtos" aria-label="Lista de produtos">
+    <article class="produto-card" *ngFor="let produto of produtos">
+      <img class="produto-imagem" [src]="produto.imagem" [alt]="produto.nome" loading="lazy" />
+      <h2>{{ produto.nome }}</h2>
+      <p class="preco">R$ {{ produto.preco.toFixed(2) }}</p>
+      <p class="descricao">{{ produto.descricao }}</p>
+      <p class="estoque" [class.indisponivel]="!produto.emEstoque">
+        {{ produto.emEstoque ? 'Em estoque' : 'Fora de estoque' }}
+      </p>
+
+      <button
+        type="button"
+        (click)="comprar(produto.id)"
+        [disabled]="!produto.emEstoque"
+        [ngClass]="{ 'btn-indisponivel': !produto.emEstoque }"
+      >
+        Comprar
+      </button>
+    </article>
+  </section>
+</main>

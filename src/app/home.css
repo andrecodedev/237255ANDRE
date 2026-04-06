@@ -3,9 +3,9 @@
 }
 
 .home-page {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   padding: 48px 20px;
-  background: radial-gradient(circle at 10% 10%, #fff1d6 0%, #f6f7ff 45%, #eef7ff 100%);
+  background: radial-gradient(circle at 10% 10%, #f0fdf4 0%, #dcfce7 48%, #bbf7d0 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -19,7 +19,7 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #7a5c00;
+  color: #166534;
   font-weight: 700;
   font-size: 0.78rem;
 }
@@ -27,41 +27,67 @@
 h1 {
   margin: 8px 0 10px;
   font-size: clamp(1.9rem, 3vw, 2.7rem);
-  color: #13203a;
+  color: #052e16;
 }
 
 .subtitle {
   margin: 0;
-  color: #3d4d6f;
+  color: #166534;
 }
 
-.module-grid {
-  width: min(860px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px;
-}
-
-.module-card {
+.actions {
+  margin: 22px auto 0;
+  max-width: 680px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 92px;
-  border-radius: 16px;
-  text-decoration: none;
-  color: #13203a;
-  font-weight: 700;
-  font-size: 1.02rem;
-  background: linear-gradient(140deg, #ffffff 0%, #f2f6ff 100%);
-  border: 1px solid #dce8ff;
-  box-shadow: 0 8px 18px rgba(31, 66, 135, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.module-card:hover,
-.module-card:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 24px rgba(18, 46, 101, 0.18);
-  outline: none;
+.toggle-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: linear-gradient(120deg, #15803d 0%, #166534 100%);
+  cursor: pointer;
+}
+
+.promo-banner {
+  width: min(720px, 100%);
+  margin: 24px auto 0;
+  border-radius: 18px;
+  padding: 24px 20px;
+  background: linear-gradient(130deg, #065f46 0%, #047857 50%, #16a34a 100%);
+  color: #ecfdf5;
+  text-align: center;
+  box-shadow: 0 16px 28px rgba(6, 95, 70, 0.24);
+}
+
+.promo-banner h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.promo-banner p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-link {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #052e16;
+  font-weight: 700;
+  background: #d1fae5;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus-visible,
+.cta-link:hover,
+.cta-link:focus-visible {
+  filter: brightness(0.95);
 }
