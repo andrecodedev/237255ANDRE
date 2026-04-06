@@ -1,17 +1,25 @@
 <main class="produto-page">
-  <h1>Produtos</h1>
+  <section class="catalog-header">
+    <p class="catalog-eyebrow">Produtos</p>
+    <h1>Lista de produtos</h1>
+  </section>
 
   <p *ngIf="produtos.length === 0" class="sem-produto">Nenhum produto disponivel no momento</p>
 
   <section *ngIf="produtos.length > 0" class="lista-produtos" aria-label="Lista de produtos">
     <article class="produto-card" *ngFor="let produto of produtos">
-      <img class="produto-imagem" [src]="produto.imagem" [alt]="produto.nome" loading="lazy" />
-      <h2>{{ produto.nome }}</h2>
-      <p class="preco">R$ {{ produto.preco.toFixed(2) }}</p>
-      <p class="descricao">{{ produto.descricao }}</p>
-      <p class="estoque" [class.indisponivel]="!produto.emEstoque">
-        {{ produto.emEstoque ? 'Em estoque' : 'Fora de estoque' }}
-      </p>
+      <div class="produto-media">
+        <img class="produto-imagem" [src]="produto.imagem" [alt]="produto.nome" loading="lazy" />
+      </div>
+
+      <div class="produto-conteudo">
+        <h2>{{ produto.nome }}</h2>
+        <p class="preco">R$ {{ produto.preco.toFixed(2) }}</p>
+        <p class="descricao">{{ produto.descricao }}</p>
+        <p class="estoque" [class.indisponivel]="!produto.emEstoque">
+          {{ produto.emEstoque ? 'Em estoque' : 'Fora de estoque' }}
+        </p>
+      </div>
 
       <button
         type="button"

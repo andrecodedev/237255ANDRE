@@ -1,9 +1,15 @@
 <header class="topbar">
-	<nav class="topnav" aria-label="Menu principal">
-		<a routerLink="/home" routerLinkActive="ativo">Home</a>
-		<a routerLink="/produtos" routerLinkActive="ativo">Produtos</a>
-		<a routerLink="/sobre" routerLinkActive="ativo">Sobre Nós</a>
-	</nav>
+	<div class="topbar-inner">
+		<a class="brand" routerLink="/home" aria-label="Voltar para a pagina inicial">
+			<strong>E-commerce Simples</strong>
+		</a>
+
+		<nav class="topnav" aria-label="Menu principal">
+			<a routerLink="/home" routerLinkActive="ativo">Home</a>
+			<a routerLink="/produtos" routerLinkActive="ativo">Produtos</a>
+			<a routerLink="/sobre" routerLinkActive="ativo">Sobre Nós</a>
+		</nav>
+	</div>
 </header>
 
 <main class="page-content">

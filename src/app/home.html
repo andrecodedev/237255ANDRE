@@ -1,17 +1,35 @@
 <main class="home-page">
   <section class="hero" aria-label="Boas-vindas da loja">
-    <p class="eyebrow">E-commerce Simples</p>
-    <h1>Bem-vindo a Loja Angular</h1>
-    <p class="subtitle">Navegue pelos produtos e confira as ofertas do dia.</p>
-  </section>
+    <div class="hero-copy">
+      <p class="eyebrow">Pagina Inicial</p>
+      <h1>E-commerce Simples</h1>
+      <p class="subtitle">Navegue pelo catalogo, veja os detalhes e acompanhe o status de estoque.</p>
 
-  <section class="actions">
-    <button type="button" class="toggle-btn" (click)="toggleBanner()">Mostrar/Ocultar Banner</button>
+      <div class="actions">
+        <button type="button" class="toggle-btn" (click)="toggleBanner()">Mostrar/Ocultar Banner</button>
+        <a routerLink="/produtos" class="ghost-link">Ir para produtos</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel" aria-label="Informacoes da plataforma">
+      <div class="panel-chip">
+        <h3>Navegacao</h3>
+        <p>Acesse Home, Produtos e Sobre no menu superior.</p>
+      </div>
+      <div class="panel-chip">
+        <h3>Produtos</h3>
+        <p>Consulte preco, descricao, estoque e detalhes por item.</p>
+      </div>
+      <div class="panel-chip">
+        <h3>Banner</h3>
+        <p>O banner pode ser exibido ou ocultado com o botao da pagina inicial.</p>
+      </div>
+    </aside>
   </section>
 
   <section *ngIf="showBanner" class="promo-banner" aria-live="polite">
-    <h2>Promocao Especial</h2>
-    <p>Frete gratis em compras acima de R$ 199,00 e 10% de desconto no primeiro pedido.</p>
+    <h2>Banner Promocional</h2>
+    <p>Frete gratis para pedidos selecionados nesta semana.</p>
     <a routerLink="/produtos" class="cta-link">Ver produtos</a>
   </section>
 </main>

@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-	--bg-page: #ecfdf5;
+	--bg-page: #efeff2;
 	--bg-surface: #ffffff;
-	--bg-contrast: #064e3b;
-	--bg-soft: #d1fae5;
-	--text-primary: #052e16;
-	--text-secondary: #166534;
-	--border-color: #86efac;
-	--shadow-color: rgba(6, 78, 59, 0.18);
+	--bg-contrast: #111111;
+	--bg-soft: #e5e7eb;
+	--text-primary: #111827;
+	--text-secondary: #4b5563;
+	--border-color: #c7cad1;
+	--shadow-color: rgba(17, 24, 39, 0.14);
 }
 
 html,
