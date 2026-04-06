@@ -27,6 +27,7 @@
             <th scope="col">Nome</th>
             <th scope="col">E-mail</th>
             <th scope="col">Cidade</th>
+            <th scope="col">Status</th>
         </tr>
     </thead>
 
@@ -49,6 +50,11 @@
             </td>
             <td [ngStyle]="{ 'background-color': deveDestacar(cliente.nome) ? '#fff59d' : '' }">
                 {{ cliente.cidade }}
+            </td>
+            <td [ngSwitch]="cliente.ativo">
+                <span *ngSwitchCase="true" class="badge text-bg-success">Ativo</span>
+                <span *ngSwitchCase="false" class="badge text-bg-secondary">Inativo</span>
+                <span *ngSwitchDefault class="badge text-bg-dark">N/D</span>
             </td>
         </tr>
     </tbody>
