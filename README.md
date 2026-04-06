@@ -1,4 +1,4 @@
-# AtividadeAngular
+# AtividadeAngular FACENS - André Vitor RA: 237255 e Gabriela da Silva RA: 240636
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
 

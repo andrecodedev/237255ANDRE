@@ -1,0 +1,6 @@
+/* ...existing code... */
+.texto-destaque th,
+.texto-destaque td {
+  color: #d97706;
+  font-weight: 700;
+}

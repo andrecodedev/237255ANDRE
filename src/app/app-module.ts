@@ -10,6 +10,10 @@ import { ApoliceSeguro } from './apolice-seguro/apolice-seguro';
 import { ConversorTemperatura } from './conversor-temperatura/conversor-temperatura';
 import { CalculadoraImc } from './calculadora-imc/calculadora-imc';
 import { Home } from './home';
+import { TelaPai } from './tela-pai/tela-pai';
+import { TelaFilho1 } from './tela-filho1/tela-filho1';
+import { TelaFilho2 } from './tela-filho2/tela-filho2';
+import { Cliente } from './cliente/cliente';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { Home } from './home';
     ApoliceSeguro,
     ConversorTemperatura,
     CalculadoraImc,
-    Home
+    Home,
+    TelaPai,
+    TelaFilho1,
+    TelaFilho2,
+    Cliente
   ],
   imports: [
     BrowserModule,

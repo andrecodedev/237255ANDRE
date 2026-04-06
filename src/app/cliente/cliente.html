@@ -1,0 +1,55 @@
+<p>cliente works!</p>
+<!-- b5-table -->
+
+<div class="mb-3">
+  <label for="filtroNome" class="form-label">Digite o nome do cliente</label>
+  <input
+    id="filtroNome"
+    type="text"
+    class="form-control"
+    [(ngModel)]="filtroNome"
+    placeholder="Ex: Mark"
+  />
+</div>
+
+<input
+    type="checkbox"
+    [(ngModel)]="mostrarTabela"
+    id="mostrarTabela"
+    class="form-check-input"
+/>
+<label for="mostrarTabela">Mostrar Tabela</label>
+
+<table *ngIf="mostrarTabela" class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Cidade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr
+            *ngFor="let cliente of clientes"
+            [ngClass]="{ 'texto-destaque': deveDestacar(cliente.nome) }"
+        >
+            <th
+                scope="row"
+                [ngStyle]="{ 'background-color': deveDestacar(cliente.nome) ? '#fff59d' : '' }"
+            >
+                {{ cliente.id }}
+            </th>
+            <td [ngStyle]="{ 'background-color': deveDestacar(cliente.nome) ? '#fff59d' : '' }">
+                {{ cliente.nome }}
+            </td>
+            <td [ngStyle]="{ 'background-color': deveDestacar(cliente.nome) ? '#fff59d' : '' }">
+                {{ cliente.email }}
+            </td>
+            <td [ngStyle]="{ 'background-color': deveDestacar(cliente.nome) ? '#fff59d' : '' }">
+                {{ cliente.cidade }}
+            </td>
+        </tr>
+    </tbody>
+</table>
